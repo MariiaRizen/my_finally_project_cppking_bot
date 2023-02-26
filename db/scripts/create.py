@@ -9,7 +9,7 @@ load_dotenv()
 create_script = """
 CREATE TABLE recipes(
 id INTEGER PRIMARY KEY AUTOINCREMENT,
-title TEXT NOT NULL,
+title TEXT NOT NULL UNIQUE,
 description TEXT,
 ingredients TEXT,
 steps TEXT,

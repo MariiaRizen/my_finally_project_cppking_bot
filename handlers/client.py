@@ -64,7 +64,8 @@ async def send_recipe_preview(chat_id, js):
 
 
 def information_about_recipe(js):
-    recipe = '\n\n'.join([js['description'], js['ingredients'], js['steps']])
+    description = js['description'].split('\nЧитайте також\n')[0].strip()
+    recipe = '\n\n'.join([description, js['ingredients'], js['steps']])
     return recipe
 
 
@@ -82,7 +83,7 @@ async def callback_recipe(callback: types.CallbackQuery):
 
 
 categories = list(category_mapper.values())
-
+print(categories)
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(send_welcome, commands=['start'])
     dp.register_message_handler(help_command, commands=['help'])

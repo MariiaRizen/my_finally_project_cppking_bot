@@ -28,7 +28,7 @@ kb_client.add(help_bt, description_bt).add(menu_bt)
 
 kb_menu = ReplyKeyboardMarkup(resize_keyboard=True)
 kb_menu.add(soup_bt, baking_bt, salad_kb, pasta_kb, snidanki_kb, zakuski_kb, drugi_stravu_kb, maso_kb,
-            ryba_kb, ovoce_kb, stravi_u_mult_kb, pisni_kb, napoi_kb,
+            ryba_kb, ovoce_kb, stravi_u_mult_kb, pisni_kb, napoi_kb, dlya_ditej_kb,
             varennya_kb, desert_kb)
 
 
